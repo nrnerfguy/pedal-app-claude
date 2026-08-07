@@ -1,0 +1,56 @@
+{
+  "expo": {
+    "name": "Pedal",
+    "slug": "pedal-delivery",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1E7A3A"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.pedal.delivery",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Pedal uses your location to find nearby stores and riders, and to verify delivery arrival.",
+        "NSCameraUsageDescription": "Pedal uses your camera to take delivery confirmation photos and set your profile picture.",
+        "NSPhotoLibraryUsageDescription": "Pedal needs access to your photos to set a profile picture."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#1E7A3A"
+      },
+      "package": "com.pedal.delivery",
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Pedal needs access to your photos to set a profile picture."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Pedal uses your location to find nearby stores and riders."
+        }
+      ]
+    ]
+  }
+}
